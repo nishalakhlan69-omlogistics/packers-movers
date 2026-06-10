@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Logistics and Packers | Best Packers and Movers Across India</title>
-    <meta name="description" content="Om Logistics and Packers provides IBA approved household shifting, office moving, vehicle relocation, and storage services.">
+    <title>Om Logistics and Packers | Best Packers and Movers in Vadodara</title>
+    <meta name="description" content="Om Logistics and Packers provides top-rated household shifting, office moving, vehicle relocation, and storage services across Vadodara and pan-India.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Global Framework Style Custom Coordinates */
+        /* Global Reset & Mobile Right-Side Blank Area Fix */
         * {
             margin: 0;
             padding: 0;
@@ -16,22 +18,24 @@
             scroll-behavior: smooth;
         }
 
-        :root {
-            --navy-primary: #0D2346;
-            --orange-secondary: #F58220;
-            --dark-strip: #071325;
-            --text-dark: #2d3748;
-            --text-muted: #5a6a85;
-            --bg-light: #f8fafc;
-            --pure-white: #ffffff;
-            --border-color: #e2e8f0;
-        }
-
-        body {
-            background: var(--pure-white);
-            color: var(--text-dark);
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden; /* Stops mobile layouts from scrolling sideways or creating dead blank space */
+            background: #ffffff;
+            color: #2d3748;
             line-height: 1.6;
             font-size: 15px;
+        }
+
+        /* exact Custom Palette Matching the Logo */
+        :root {
+            --logo-navy: #1B2A4A;      /* Deep Navy Blue from logo */
+            --logo-orange: #FF7A00;    /* Vibrant Action Orange from logo */
+            --dark-background: #0F192C;
+            --light-shade: #F4F7FA;
+            --pure-white: #ffffff;
+            --border-color: #E2E8F0;
+            --text-gray: #5A6A85;
         }
 
         .container {
@@ -40,12 +44,13 @@
             margin: 0 auto;
         }
 
-        /* 1. Top Contact Header Strip */
+        /* Top Notification Header */
         .top-bar {
-            background: var(--dark-strip);
+            background: var(--dark-background);
             color: var(--pure-white);
-            padding: 10px 0;
+            padding: 11px 0;
             font-size: 13px;
+            border-bottom: 3px solid var(--logo-orange);
         }
 
         .top-bar-flex {
@@ -63,16 +68,18 @@
             text-decoration: none;
             font-weight: 600;
         }
+        .top-bar a:hover {
+            color: var(--logo-orange);
+        }
 
-        /* 2. Main Sticky Navigation Block */
+        /* Main Navigation Bar */
         header {
-            background: var(--pure-white);
+            background: var(--logo-navy);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 12px rgba(13, 35, 70, 0.06);
-            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(27, 42, 74, 0.15);
         }
 
         .navbar {
@@ -81,25 +88,28 @@
             align-items: center;
         }
 
-        .logo {
+        .logo-text {
             font-size: 24px;
             font-weight: 800;
-            color: var(--navy-primary);
+            color: var(--pure-white);
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .logo span {
-            color: var(--orange-secondary);
+        .logo-text span {
+            color: var(--logo-orange);
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 22px;
+            gap: 24px;
         }
 
         .nav-links a {
-            color: var(--text-dark);
+            color: #E2E8F0;
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
@@ -107,29 +117,29 @@
         }
 
         .nav-links a:hover {
-            color: var(--orange-secondary);
+            color: var(--logo-orange);
         }
 
         .nav-quote-btn {
-            background: var(--orange-secondary);
+            background: var(--logo-orange);
             color: var(--pure-white) !important;
-            padding: 9px 18px;
+            padding: 10px 20px;
             border-radius: 4px;
             transition: background 0.2s ease;
         }
 
         .nav-quote-btn:hover {
-            background: #d46d14;
+            background: #E06B00;
         }
 
-        /* Hero Banner Interface Layout */
+        /* Hero Banner Section */
         .hero {
-            background: linear-gradient(rgba(7, 19, 37, 0.92), rgba(13, 35, 70, 0.92)), 
+            background: linear-gradient(rgba(15, 25, 44, 0.92), rgba(27, 42, 74, 0.92)), 
                         url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200');
             background-size: cover;
             background-position: center;
             color: var(--pure-white);
-            padding: 70px 0;
+            padding: 80px 0;
         }
 
         .hero-grid {
@@ -140,15 +150,19 @@
         }
 
         .hero-content h1 {
-            font-size: 42px;
+            font-size: 44px;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 15px;
         }
 
+        .hero-content h1 span {
+            color: var(--logo-orange);
+        }
+
         .hero-sub {
-            font-size: 17px;
-            color: #cbd5e1;
+            font-size: 18px;
+            color: #CBD5E1;
             margin-bottom: 25px;
         }
 
@@ -156,11 +170,11 @@
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .badge-item {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.1);
             padding: 6px 14px;
             border-radius: 4px;
             font-size: 13px;
@@ -169,12 +183,13 @@
         }
 
         .hero-call-box {
-            background: var(--orange-secondary);
-            padding: 12px 20px;
+            background: var(--logo-orange);
+            padding: 14px 22px;
             border-radius: 4px;
             display: inline-block;
             font-weight: 700;
             font-size: 16px;
+            box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3);
         }
 
         .hero-call-box a {
@@ -182,50 +197,52 @@
             text-decoration: none;
         }
 
-        /* Intake Form Grid Matrix */
+        /* Lead Intake Quote Form */
         .enquiry-card {
             background: var(--pure-white);
-            color: var(--text-dark);
+            color: #2d3748;
             padding: 30px;
-            border-radius: 6px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
         .enquiry-card h3 {
-            color: var(--navy-primary);
-            font-size: 20px;
+            color: var(--logo-navy);
+            font-size: 22px;
             margin-bottom: 4px;
+            font-weight: 800;
         }
 
         .enquiry-card p {
             font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 18px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
         }
 
         .form-group {
-            margin-bottom: 14px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
             font-size: 12px;
             font-weight: 700;
-            margin-bottom: 4px;
-            color: #4a5568;
+            margin-bottom: 5px;
+            color: #4A5568;
         }
 
         .form-group input, .form-group select {
             width: 100%;
-            padding: 10px 12px;
+            padding: 11px 14px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
             font-size: 14px;
             outline: none;
+            transition: border 0.2s;
         }
 
         .form-group input:focus, .form-group select:focus {
-            border-color: var(--orange-secondary);
+            border-color: var(--logo-orange);
         }
 
         .form-split {
@@ -236,9 +253,9 @@
 
         .submit-btn {
             width: 100%;
-            background: var(--orange-secondary);
+            background: var(--logo-orange);
             color: var(--pure-white);
-            padding: 12px;
+            padding: 14px;
             border: none;
             border-radius: 4px;
             font-weight: 700;
@@ -249,137 +266,50 @@
         }
 
         .submit-btn:hover {
-            background: #d46d14;
+            background: #E06B00;
         }
 
-        /* Universal Section Padding Setup */
+        /* Global Sections Framework */
         .sec-padding { padding: 80px 0; }
-        .sec-alt { padding: 80px 0; background: var(--bg-light); }
+        .sec-alt { padding: 80px 0; background: var(--light-shade); }
 
         .center-heading {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 55px;
         }
         .center-heading .sub-tag {
-            background: #fbeeed;
-            color: var(--orange-secondary);
+            background: #FFEFE0;
+            color: var(--logo-orange);
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
             letter-spacing: 1px;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .center-heading h2 {
-            font-size: 34px;
-            color: var(--navy-primary);
+            font-size: 36px;
+            color: var(--logo-navy);
             font-weight: 800;
         }
-        .center-heading h2 span { color: var(--orange-secondary); }
-        .center-heading p { color: var(--text-muted); font-size: 15px; margin-top: 6px; }
+        .center-heading h2 span { color: var(--logo-orange); }
+        .center-heading p { color: var(--text-gray); font-size: 16px; margin-top: 8px; }
 
-        /* Screenshot 2 Style Implementation: Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .service-card {
-            background: var(--pure-white);
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
+        /* Cascading Pop-Up Hidden Base State */
+        .scroll-popup-node {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(13, 35, 70, 0.06);
-            border-color: rgba(245, 130, 32, 0.3);
+        .scroll-popup-node.popup-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .srv-icon-box {
-            width: 40px;
-            height: 40px;
-            background: #fbeeed;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            margin-bottom: 18px;
-            color: var(--orange-secondary);
-        }
-
-        .service-card h3 {
-            font-size: 18px;
-            color: var(--navy-primary);
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            height: 65px;
-            overflow: hidden;
-        }
-
-        .srv-readmore {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.2s;
-        }
-        .service-card:hover .srv-readmore {
-            color: var(--orange-secondary);
-        }
-
-        .custom-plan-banner {
-            background: var(--navy-primary);
-            color: var(--pure-white);
-            padding: 35px 40px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 40px;
-        }
-
-        .custom-plan-banner h4 { font-size: 22px; font-weight: 700; margin-bottom: 5px; }
-        .custom-plan-banner p { color: #cbd5e1; font-size: 14px; }
-        
-        .banner-cta-btn {
-            background: var(--pure-white);
-            color: var(--navy-primary);
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.2s;
-            border: 2px solid var(--pure-white);
-        }
-        .custom-plan-banner .banner-cta-btn:hover {
-            background: transparent;
-            color: var(--pure-white);
-        }
-
-        /* Screenshot 5 Style Implementation: About Block & Interactive Tab Swapper */
+        /* About Section Layout with Counter Mechanics */
         .about-section-layout {
             display: grid;
             grid-template-columns: 1fr 1.1fr;
@@ -393,66 +323,73 @@
 
         .about-img-frame {
             width: 100%;
+            height: 390px;
+            object-fit: cover;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 12px 35px rgba(27,42,74,0.12);
             display: block;
+            border-bottom: 5px solid var(--logo-orange);
         }
 
         .about-quote-overlay {
-            background: var(--pure-white);
-            padding: 20px;
+            background: var(--logo-navy);
+            color: var(--pure-white);
+            padding: 22px;
             border-radius: 6px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--orange-secondary);
-            margin-top: -50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--logo-orange);
+            margin-top: -45px;
             margin-left: 20px;
             margin-right: 20px;
             position: relative;
             z-index: 10;
         }
 
-        .about-quote-overlay p { font-style: italic; font-size: 14px; color: var(--text-dark); margin-bottom: 6px;}
-        .about-quote-overlay span { font-weight: 700; font-size: 12px; color: var(--orange-secondary); text-transform: uppercase;}
+        .about-quote-overlay p { font-style: italic; font-size: 14px; margin-bottom: 6px; color: #E2E8F0; }
+        .about-quote-overlay span { font-weight: 700; font-size: 12px; color: var(--logo-orange); text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* Running Target Numbers Counter Row Layout */
         .running-counters-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             margin-top: 30px;
-            background: #f1f5f9;
+            background: var(--light-shade);
             padding: 15px;
             border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
         .counter-item-box {
             text-align: center;
             background: var(--pure-white);
-            padding: 15px 10px;
+            padding: 16px 10px;
             border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border-top: 3px solid var(--logo-navy);
         }
 
         .counter-item-box .num-core {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 800;
-            color: var(--orange-secondary);
+            color: var(--logo-navy);
             line-height: 1.2;
         }
 
         .counter-item-box .lbl-core {
             font-size: 11px;
             font-weight: 700;
-            color: var(--text-muted);
+            color: var(--text-gray);
             text-transform: uppercase;
-            margin-top: 3px;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
         }
 
+        /* Tabs Interface styling */
         .tabs-header-nav {
             display: flex;
             gap: 25px;
             border-bottom: 1px solid var(--border-color);
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             padding-bottom: 10px;
         }
 
@@ -460,15 +397,15 @@
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
-            color: var(--text-muted);
+            color: var(--text-gray);
             cursor: pointer;
             padding-bottom: 8px;
             position: relative;
-            letter-spacing: 0.5px;
+            transition: color 0.2s;
         }
 
         .tab-trigger-link.active-tab-head {
-            color: var(--orange-secondary);
+            color: var(--logo-orange);
         }
         .tab-trigger-link.active-tab-head::after {
             content: '';
@@ -476,12 +413,20 @@
             bottom: -11px;
             left: 0;
             width: 100%;
-            height: 2px;
-            background: var(--orange-secondary);
+            height: 3px;
+            background: var(--logo-orange);
         }
 
+        .tab-content-pane h3 {
+            font-size: 24px;
+            color: var(--logo-navy);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+        .tab-content-pane h3 span { color: var(--logo-orange); }
+
         .tab-content-pane p {
-            color: var(--text-muted);
+            color: var(--text-gray);
             font-size: 15px;
             margin-bottom: 15px;
             line-height: 1.7;
@@ -494,7 +439,7 @@
         }
 
         .btn-filled-orange {
-            background: var(--orange-secondary);
+            background: var(--logo-orange);
             color: var(--pure-white);
             padding: 12px 24px;
             border-radius: 4px;
@@ -502,318 +447,255 @@
             text-decoration: none;
             font-size: 14px;
             text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            box-shadow: 0 4px 12px rgba(255, 122, 0, 0.2);
         }
 
         .btn-outline-navy {
-            border: 2px solid var(--navy-primary);
-            color: var(--navy-primary);
+            border: 2px solid var(--logo-navy);
+            color: var(--logo-navy);
             padding: 10px 24px;
             border-radius: 4px;
             font-weight: 700;
             text-decoration: none;
             font-size: 14px;
             text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            transition: all 0.2s;
+        }
+        .btn-outline-navy:hover {
+            background: var(--logo-navy);
+            color: white;
         }
 
-        /* Screenshot 3 Style Implementation: Professional Help Grid */
-        .prof-helps-layout {
+        /* Services Custom 3x3x2 Grid with Real Graphic Background Covers */
+        .services-horizontal-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 30px;
-        }
-
-        .helps-dark-panel {
-            background: #1a1a1a;
-            color: var(--pure-white);
-            border-radius: 8px;
-            padding: 35px;
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .help-row-node {
-            display: flex;
-            gap: 15px;
-            align-items: start;
-        }
-
-        .help-icon-badge {
-            width: 34px;
-            height: 34px;
-            border-radius: 6px;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--orange-secondary);
-        }
-
-        .help-text-node h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: var(--pure-white); }
-        .help-text-node p { font-size: 13.5px; color: #a0aec0; line-height: 1.5; }
-
-        .pricing-white-panel {
+        .service-card {
             background: var(--pure-white);
-            border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 35px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border-bottom: 4px solid var(--logo-navy);
         }
 
-        .pricing-tag-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .service-card:hover {
+            border-color: var(--logo-orange);
+            box-shadow: 0 12px 30px rgba(27, 42, 74, 0.1);
+        }
+
+        .srv-img-frame {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--logo-orange);
+        }
+
+        .srv-text-container {
+            padding: 25px;
+        }
+
+        .srv-text-container h3 {
+            font-size: 19px;
+            color: var(--logo-navy);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .srv-text-container p {
+            font-size: 14px;
+            color: var(--text-gray);
             margin-bottom: 15px;
         }
 
-        .p-badge-tag {
-            background: #fbeeed;
-            color: var(--orange-secondary);
-            font-size: 11px;
+        .srv-readmore {
+            color: var(--logo-orange);
+            text-decoration: none;
+            font-size: 12px;
             font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 4px;
             text-transform: uppercase;
-        }
-
-        .pricing-white-panel h3 { font-size: 20px; color: var(--navy-primary); font-weight: 800; margin-bottom: 15px; }
-        .pricing-white-panel .desc-p { color: var(--text-muted); font-size: 14px; margin-bottom: 25px; }
-
-        .pricing-factors-matrix {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .factor-box-card {
-            border: 1px solid var(--border-color);
-            padding: 12px 15px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-dark);
-            background: var(--bg-light);
-        }
-        .factor-box-card span { color: var(--orange-secondary); }
-
-        /* Screenshot 4 Style Implementation: Pan-India & Materials Network Split */
-        .split-network-layout {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 30px;
-        }
-
-        .net-white-box {
-            background: var(--pure-white);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 35px;
-        }
-
-        .net-header-block {
-            display: flex;
-            gap: 15px;
-            align-items: start;
-            margin-bottom: 20px;
-        }
-
-        .net-icon-square {
-            width: 40px;
-            height: 40px;
-            background: #fbeeed;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--orange-secondary);
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .net-header-txt span {
-            background: #fbeeed;
-            color: var(--orange-secondary);
-            font-size: 10px;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-        .net-header-txt h3 { font-size: 20px; color: var(--navy-primary); font-weight: 800; margin-top: 3px; }
-
-        .net-desc-text { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
-
-        .locations-flex-wrap {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .loc-pill-tag {
-            border: 1px solid var(--border-color);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13.5px;
-            font-weight: 600;
-            color: var(--text-dark);
-            background: var(--pure-white);
+            letter-spacing: 0.5px;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-        }
-        .loc-pill-tag::before {
-            content: '•';
-            color: var(--orange-secondary);
-            font-size: 16px;
+            gap: 5px;
         }
 
-        .materials-dark-box {
-            background: #1a1a1a;
-            color: var(--pure-white);
+        /* How It Works Section - Horizontal Vector Box cards */
+        .how-works-horizontal-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .step-horizontal-card {
+            background: var(--pure-white);
+            border: 1px solid var(--border-color);
+            padding: 28px 20px;
             border-radius: 8px;
-            padding: 35px;
+            text-align: center;
+            border-bottom: 4px solid var(--logo-navy);
         }
 
-        .mat-header-txt span {
-            background: rgba(255,255,255,0.1);
-            color: var(--orange-secondary);
-            font-size: 10px;
+        .step-horizontal-card:hover {
+            border-color: var(--logo-orange);
+            box-shadow: 0 10px 25px rgba(27, 42, 74, 0.06);
+        }
+
+        .step-icon-wrapper {
+            width: 58px;
+            height: 58px;
+            background: var(--light-shade);
+            color: var(--logo-orange);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-horizontal-card h4 {
+            font-size: 17px;
+            color: var(--logo-navy);
+            margin-bottom: 8px;
             font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-        .mat-header-txt h3 { font-size: 20px; color: var(--pure-white); font-weight: 800; margin-top: 3px; }
-
-        .materials-list-vertical {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 25px;
         }
 
-        .mat-row-check-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            padding: 12px 15px;
+        .step-horizontal-card p {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        /* Reviews Block Compressed 3x2 Matrix Setup */
+        .reviews-horizontal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: var(--pure-white);
+            padding: 25px;
+            border: 1px solid var(--border-color);
             border-radius: 6px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+            border-top: 3px solid var(--logo-navy);
+        }
+
+        .review-card::before {
+            content: "\f10d";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: rgba(255, 122, 0, 0.12);
+            font-size: 24px;
+        }
+
+        .review-card p {
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .review-by {
+            font-weight: 700;
+            color: var(--logo-navy);
             font-size: 14px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
-        .mat-row-check-card .check-bullet {
-            color: var(--orange-secondary);
-            font-weight: bold;
-        }
-        .mat-row-check-card strong { color: var(--pure-white); margin-right: 4px; }
-        .mat-row-check-card span.lbl-muted { color: #a0aec0; }
-
-        /* Screenshot 6 Style Implementation: Due Diligence Framework */
-        .due-diligence-layout {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 30px;
+        .review-by::before {
+            content: "\f007";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--logo-orange);
+            font-size: 12px;
         }
 
-        .due-dark-pane {
-            background: #1a1a1a;
-            padding: 35px;
-            border-radius: 8px;
+        /* Clickable Background Accordion FAQ Layout */
+        .faq-accordion {
+            max-width: 850px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-        }
-
-        .due-dark-pane h3 { font-size: 22px; color: var(--pure-white); font-weight: 800; margin-bottom: 10px; }
-        .due-dark-pane .due-tag {
-            background: rgba(255,255,255,0.1);
-            color: var(--orange-secondary);
-            font-size: 10px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 4px;
-            align-self: start;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-
-        .due-list-item-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            padding: 12px 15px;
-            border-radius: 6px;
-            display: flex;
             gap: 15px;
-            align-items: center;
-        }
-        .due-list-item-card .d-seq-number {
-            font-size: 13px;
-            font-weight: 800;
-            color: var(--orange-secondary);
-            flex-shrink: 0;
-        }
-        .due-list-item-card .d-core-text {
-            font-size: 13.5px;
-            color: #cbd5e1;
         }
 
-        .how-works-white-pane {
-            background: var(--pure-white);
+        .accordion-item {
+            background: var(--light-shade); 
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 35px;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .how-works-vertical-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            position: relative;
-            margin-top: 25px;
-        }
-
-        .timeline-step-node {
-            display: flex;
-            gap: 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .step-bubble-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--navy-primary);
-            color: var(--pure-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .accordion-header {
+            padding: 18px 24px;
+            background: var(--light-shade);
+            color: var(--logo-navy);
+            font-size: 16px;
             font-weight: 700;
-            font-size: 13px;
-            flex-shrink: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.2s, color 0.2s;
         }
 
-        .step-info-block h4 { font-size: 16px; color: var(--navy-primary); font-weight: 700; margin-bottom: 4px; }
-        .step-info-block h4 span { color: var(--orange-secondary); }
-        .step-info-block p { font-size: 13.5px; color: var(--text-muted); line-height: 1.5; }
+        .accordion-header:hover {
+            background: #EAEFF4;
+        }
 
-        /* Screenshot 7 Style Implementation: Big Corporate Sub-Footer Counters strip */
-        .corporate-red-banner-strip {
-            background: var(--navy-primary);
+        .accordion-icon {
+            font-size: 14px;
+            transition: transform 0.3s ease;
+            color: var(--logo-orange);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: var(--pure-white);
+        }
+
+        .accordion-content p {
+            padding: 22px 24px;
+            font-size: 14.5px;
+            color: #4A5568;
+            line-height: 1.6;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Open active accordion states classes */
+        .accordion-item.active-faq .accordion-header {
+            background: var(--logo-navy);
             color: var(--pure-white);
-            padding: 25px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .accordion-item.active-faq .accordion-icon {
+            transform: rotate(180deg);
+            color: var(--logo-orange);
+        }
+
+        /* Sub-Footer Active Counters Milestone Strip */
+        .corporate-red-banner-strip {
+            background: var(--logo-navy);
+            color: var(--pure-white);
+            padding: 35px 0;
+            border-top: 4px solid var(--logo-orange);
         }
 
         .corp-strip-flex {
@@ -824,126 +706,39 @@
             gap: 20px;
         }
 
-        .corp-left-tag h4 { font-size: 18px; font-weight: 800; }
-        .corp-left-tag p { font-size: 12px; color: #cbd5e1; margin-top: 2px; }
+        .corp-left-tag h4 { font-size: 22px; font-weight: 800; color: var(--pure-white); }
+        .corp-left-tag p { font-size: 13px; color: #CBD5E1; margin-top: 3px; }
 
         .corp-metrics-set {
             display: flex;
-            gap: 50px;
+            gap: 60px;
         }
 
         .corp-stat-node {
             text-align: center;
         }
         .corp-stat-node .stat-big-num {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 800;
-            color: var(--pure-white);
+            color: var(--logo-orange);
             line-height: 1.1;
         }
         .corp-stat-node .stat-label {
             font-size: 11px;
-            font-weight: 600;
-            color: #cbd5e1;
+            font-weight: 700;
+            color: #CBD5E1;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-top: 4px;
         }
 
-        /* 12-Question Detailed Accordion Block Framework */
-        .faq-accordion {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .accordion-item {
-            background: var(--pure-white);
-            padding: 18px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-        }
-
-        .accordion-item h4 {
-            color: var(--navy-primary);
-            font-size: 15px;
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
-
-        .accordion-item p {
-            font-size: 13.5px;
-            color: var(--text-muted);
-        }
-
-        /* Reviews Box */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .review-card {
-            background: var(--pure-white);
-            padding: 25px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-        }
-
-        .review-card p {
-            font-style: italic;
-            font-size: 14px;
-            margin-bottom: 10px;
-            color: var(--text-muted);
-        }
-
-        .review-by {
-            font-weight: 700;
-            color: var(--navy-primary);
-            font-size: 14px;
-        }
-
-        /* Contact Headquarters Layout Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .office-details h3 {
-            font-size: 22px;
-            color: var(--navy-primary);
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .branch-block {
-            background: var(--bg-light);
-            padding: 20px;
-            border-radius: 4px;
-            border-left: 4px solid var(--navy-primary);
-            margin-bottom: 15px;
-        }
-
-        .branch-block h5 {
-            color: var(--orange-secondary);
-            font-size: 15px;
-            margin-bottom: 5px;
-            font-weight: 700;
-        }
-
-        .branch-block p {
-            font-size: 14px;
-        }
-
-        /* Big Corporate Multi-Column Footer */
+        /* Main Corporate Structured Footer */
         footer {
-            background: var(--dark-strip);
-            color: #a0aec0;
-            padding: 60px 0 25px 0;
+            background: var(--dark-background);
+            color: #A0AEC0;
+            padding: 65px 0 25px 0;
             font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
         .footer-grid {
@@ -955,7 +750,7 @@
 
         .footer-col h4 {
             color: var(--pure-white);
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             font-size: 16px;
             font-weight: 700;
             position: relative;
@@ -966,31 +761,17 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 30px;
+            width: 35px;
             height: 2px;
-            background: var(--orange-secondary);
+            background: var(--logo-orange);
         }
 
         .footer-col p { font-size: 13px; line-height: 1.6; }
 
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 10px;
-            font-size: 13.5px;
-        }
-
-        .footer-col ul li a {
-            color: #a0aec0;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-col ul li a:hover {
-            color: var(--orange-secondary);
-        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 11px; font-size: 13.5px; }
+        .footer-col ul li a { color: #A0AEC0; text-decoration: none; transition: color 0.2s; }
+        .footer-col ul li a:hover { color: var(--logo-orange); }
 
         .contact-vertical-list {
             display: flex;
@@ -1002,11 +783,20 @@
             display: flex;
             gap: 12px;
             align-items: start;
-            font-size: 13px;
+            font-size: 13.5px;
         }
         .contact-list-card .c-icon-square {
-            color: var(--orange-secondary);
+            color: var(--logo-orange);
             flex-shrink: 0;
+            margin-top: 3px;
+        }
+        .contact-list-card a {
+            color: #A0AEC0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-list-card a:hover {
+            color: var(--logo-orange);
         }
 
         .footer-bottom {
@@ -1017,12 +807,12 @@
             color: #718096;
         }
 
-        /* Floating Interactive Core Buttons */
+        /* Fixed Quick Interaction Elements */
         .call-btn-float {
             position: fixed;
             right: 20px;
             bottom: 75px;
-            background: var(--orange-secondary);
+            background: var(--logo-orange);
             color: white;
             padding: 12px 18px;
             border-radius: 50px;
@@ -1048,14 +838,36 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        /* Responsive Layout Overrides */
+        /* Media Queries Layout Modifiers */
         @media(max-width: 991px) {
-            .hero-grid, .about-section-layout, .prof-helps-layout, .split-network-layout, .due-diligence-layout, .contact-grid, .footer-grid {
+            .hero-grid, .about-section-layout {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 35px;
+            }
+            .services-horizontal-grid, .reviews-horizontal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .how-works-horizontal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             .nav-links, .top-bar { display: none; }
-            .corp-metrics-set { gap: 25px; }
+            .corp-metrics-set { gap: 30px; }
+        }
+
+        @media(max-width: 650px) {
+            .services-horizontal-grid, .reviews-horizontal-grid, .how-works-horizontal-grid, .footer-grid {
+                grid-template-columns: 1fr; /* Drops layouts cleanly to a single standard column on small viewports to eradicate side dead space */
+            }
+            .corp-metrics-set {
+                flex-direction: column;
+                width: 100%;
+                gap: 20px;
+                margin-top: 15px;
+            }
+            .corp-strip-flex { text-align: center; justify-content: center; }
         }
     </style>
 </head>
@@ -1073,15 +885,14 @@
 
     <header>
         <div class="container navbar">
-            <div class="logo">OM <span>LOGISTICS</span></div>
+            <div class="logo-text">OM <span>LOGISTICS</span></div>
             <nav class="nav-links">
                 <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#why-choose-us">Why Us</a>
-                <a href="#areas">Network</a>
+                <a href="#services">Our Services</a>
+                <a href="#process">Shifting Process</a>
                 <a href="#reviews">Reviews</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact" class="nav-quote-btn">Get Free Quote</a>
+                <a href="#faq">FAQ Overview</a>
+                <a href="#about" class="nav-quote-btn">Get Free Quote</a>
             </nav>
         </div>
     </header>
@@ -1089,25 +900,25 @@
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <h1>Best Packers and Movers Across India</h1>
+                <h1>Best Packers and Movers in <span>Vadodara</span></h1>
                 <p class="hero-sub">Your Trust, Our Transit – Safely Shifting Your World, Anywhere in India.</p>
                 <div class="hero-badges">
-                    <div class="badge-item">IBA Approved</div>
-                    <div class="badge-item">Fast Local & Intercity Moves</div>
-                    <div class="badge-item">Quick Callback Support</div>
+                    <div class="badge-item"><i class="fa-solid fa-shield-halved"></i> IBA Approved</div>
+                    <div class="badge-item"><i class="fa-solid fa-truck-fast"></i> Local & Intercity Moves</div>
+                    <div class="badge-item"><i class="fa-solid fa-headset"></i> Quick Callback Support</div>
                 </div>
                 <div class="hero-call-box">
-                    <a href="tel:+919898146966">पैकर्स एंड मूवर्स सेवाओं के लिए कॉल करें: +91 9898146966</a>
+                    <a href="tel:+919898146966"><i class="fa-solid fa-phone-flip"></i> पैकर्स एंड मूवर्स सेवाओं के लिए कॉल करें: +91 9898146966</a>
                 </div>
             </div>
 
             <div class="enquiry-card">
-                <h3>Get a Free Moving Estimate</h3>
-                <p>Fill in your details and our team will get back to you with a transparent quote.</p>
+                <h3>Get a Free Shifting Estimate</h3>
+                <p>Fill in your details and our team will get back to you with a transparent quote breakdown.</p>
                 <form action="https://formspree.io/f/placeholder" method="POST">
                     <div class="form-group">
                         <label>Your Name</label>
-                        <input type="text" name="name" required placeholder="Enter Name">
+                        <input type="text" name="name" required placeholder="Enter Full Name">
                     </div>
                     <div class="form-group">
                         <label>Mobile Number</label>
@@ -1116,7 +927,7 @@
                     <div class="form-split">
                         <div class="form-group">
                             <label>Moving From</label>
-                            <input type="text" name="moving_from" required placeholder="Origin City">
+                            <input type="text" name="moving_from" required placeholder="Origin City (e.g. Vadodara)">
                         </div>
                         <div class="form-group">
                             <label>Moving To</label>
@@ -1127,25 +938,25 @@
                         <div class="form-group">
                             <label>Moving Type</label>
                             <select name="moving_type" required>
-                                <option value="Within City">Within City</option>
+                                <option value="Within City">Within Vadodara City</option>
                                 <option value="Within State">Within State</option>
-                                <option value="Interstate">Interstate</option>
-                                <option value="Commercial Move">Commercial Move</option>
+                                <option value="Interstate">Interstate Move</option>
+                                <option value="Commercial Move">Commercial Relocation</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Select Service</label>
+                            <label>Select Service Needed</label>
                             <select name="service_type" required>
                                 <option value="Household Shifting">Household Shifting</option>
                                 <option value="Office Relocation">Office Relocation</option>
                                 <option value="Car Transportation">Car Transportation</option>
                                 <option value="Bike Transportation">Bike Transportation</option>
                                 <option value="Packing and Unpacking">Packing and Unpacking</option>
-                                <option value="Storage and Warehousing">Storage and Warehousing</option>
+                                <option value="Storage and Warehousing">Storage & Warehousing</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="submit-btn">Submit Enquiry</button>
+                    <button type="submit" class="submit-btn">Submit Moving Request</button>
                 </form>
             </div>
         </div>
@@ -1154,10 +965,10 @@
     <section id="about" class="sec-padding">
         <div class="container about-section-layout">
             <div class="about-visual-container">
-                <img class="about-img-frame" src="https://images.unsplash.com/photo-1539683255143-73a6b838b106?q=80&w=600" alt="Om Logistics Movers Team Setup">
+                <img class="about-img-frame" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600" alt="Om Logistics and Packers commercial truck distribution network">
                 <div class="about-quote-overlay">
                     <p>"Being organized is key. Understanding cost factors ensures a smooth move."</p>
-                    <span>— Management Desk, Owner</span>
+                    <span>— Om Logistics and Packers</span>
                 </div>
                 
                 <div class="running-counters-row">
@@ -1185,32 +996,32 @@
                 </div>
 
                 <div id="overview-pane" class="tab-content-pane">
-                    <h3 style="font-size:24px; color:var(--navy-primary); margin-bottom:12px; font-weight:800;">Reliable Help When You <span>Need It Most</span></h3>
+                    <h3>Reliable Help When You <span>Need It Most</span></h3>
                     <p>Are you thinking of relocating soon? Selecting reliable Packers and Movers in Vadodara makes the procedure far easier — especially when dealing with society permissions and tight timelines. While tackling unexpected route traffic, lift availability, and building rules often create delays, booking experienced professionals saves both effort and time.</p>
-                    <p>Om Logistics and Packers is a renowned name in the transfer of goods and materials industry with the domestic and international sector, which has a leading experience in packers and movers service with its corporate office in Vadodara.</p>
+                    <p>Om Logistics and Packers is a renowned name in the transfer of goods and materials industry within the domestic sector, possessing leading experience in packers and movers services with our premium corporate presence based in Vadodara.</p>
                 </div>
 
                 <div id="services-pane" class="tab-content-pane" style="display:none;">
-                    <h3 style="font-size:22px; color:var(--navy-primary); margin-bottom:12px;">Full-Scale Relocation Services</h3>
-                    <p>We supply packing, moving, installation and services of goods and materials for different areas of customers — industrial, domestic, international — serving clients such as banks, pharmaceutical companies, businessmen, and corporate families.</p>
-                    <p>Whether it's car carrier service, household goods moving, domestic or international freight, or full-scale relocation — Om Logistics and Packers is available any time to deliver the best service.</p>
+                    <h3>Full-Scale Shifting Support</h3>
+                    <p>We supply packing, moving, installation and delivery services of goods and materials for different areas of customers — industrial, domestic, and commercial — serving clients such as banks, medical spaces, local businesses, and corporate families.</p>
+                    <p>Whether it's vehicle transport container service, household goods moving, domestic freight networks, or comprehensive corporate shifting — Om Logistics and Packers is available 24/7 to deliver pristine service benchmarks.</p>
                 </div>
 
                 <div id="guidelines-pane" class="tab-content-pane" style="display:none;">
-                    <h3 style="font-size:22px; color:var(--navy-primary); margin-bottom:12px;">Moving Guidelines & Tips</h3>
-                    <p><strong>Do the Research:</strong> Choose through referrals or verified profiles. Om Logistics remains the most trusted option since launch.</p>
-                    <p><strong>Stay Organized:</strong> Understand cost factors like labour quality, packaging materials, vehicle type, and distance to ensure a completely smooth move.</p>
+                    <h3>Moving Guidelines & Tips</h3>
+                    <p><strong>Do the Research:</strong> Choose through verified peer recommendations or live customer profiles. Om Logistics remains the most trusted option since launch due to clear operational execution.</p>
+                    <p><strong>Stay Organized:</strong> Better understand fundamental cost metrics like premium labor quality, protective packaging materials, heavy-duty vehicle profiles, and actual distance variables to ensure a completely seamless move.</p>
                 </div>
 
                 <div id="advantages-pane" class="tab-content-pane" style="display:none;">
-                    <h3 style="font-size:22px; color:var(--navy-primary); margin-bottom:12px;">Hassle-Free Transit Edge</h3>
-                    <p>Trained staff handle everything so you focus completely on settling into your new space. Proper robust packing and dedicated vehicles minimize any chances of damage in transit.</p>
-                    <p>We ensure guaranteed on-time delivery with baseline compensation protection policies in place for complete corporate peace of mind.</p>
+                    <h3>The Om Logistics Shifting Advantage</h3>
+                    <p>Our completely trained moving staff handles every detail of loading, transport, and setup so you can focus 100% on settling comfortably into your brand-new home layout.</p>
+                    <p>We utilize specialized premium shock-absorbent multi-layer box packing to make sure all fragile objects have max defense. We ensure guaranteed on-time delivery metrics backed by reliable transit safety protection policies.</p>
                 </div>
 
                 <div class="about-action-row">
-                    <a href="#contact" class="btn-filled-orange">ℹ️ About Us</a>
-                    <a href="tel:+919898146966" class="btn-outline-navy">📞 Call Now</a>
+                    <a href="#about" class="btn-filled-orange"><i class="fa-solid fa-circle-info"></i> Contact Us</a>
+                    <a href="tel:+919898146966" class="btn-outline-navy"><i class="fa-solid fa-phone"></i> Call Office</a>
                 </div>
             </div>
         </div>
@@ -1220,161 +1031,107 @@
         <div class="container">
             <div class="center-heading">
                 <span class="sub-tag">What We Offer</span>
-                <h2>Our <span>Services</span></h2>
-                <p>End-to-end moving solutions for homes, offices, and vehicles — handled with care, precision, and real-time support across India.</p>
+                <h2>Our Premium Shifting <span>Services</span></h2>
+                <p>End-to-end moving solutions for homes, offices, and vehicles — handled with care and real-time support across India.</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card"><div class="srv-icon-box">🏠</div><h3>Home Shifting Service</h3><p>Whether moving locally or across India, our team ensures your belongings are packed and unpacked with care under real-time supervision.</p><a href="#contact" class="srv-readmore">Read More →</a></div>
-                <div class="service-card"><div class="srv-icon-box">🏢</div><h3>Office Shifting Services</h3><p>We provide efficient office relocation with real-time updates and professional handling of tech, workstations, and documents.</p><a href="#contact" class="srv-readmore">Read More →</a></div>
-                <div class="service-card"><div class="srv-icon-box">🚗</div><h3>Vehicle Packers and Movers</h3><p>Our professionals safely transport cars and bikes between cities at affordable packers and movers charges with custom carrier assets.</p><a href="#contact" class="srv-readmore">Read More →</a></div>
-                <div class="service-card"><div class="srv-icon-box">🏭</div><h3>Warehouse Goods Shifting</h3><p>Our localized corporate warehouse goods movers ensure damage-free and delay-free local transportation loops.</p><a href="#contact" class="srv-readmore">Read More →</a></div>
-                <div class="service-card"><div class="srv-icon-box">📦</div><h3>Packing and Unpacking</h3><p>We ease the burden of packing and unpacking with high-quality multi-layered protective materials designed for maximum security.</p><a href="#contact" class="srv-readmore">Read More →</a></div>
-                <div class="service-card"><div class="srv-icon-box">🛠️</div><h3>Assembling & Disassembling</h3><p>Our disassembling service is a smart choice for local shifting to fully stabilize and protect your heavy furniture configurations in transit.</p><a href="#contact" class="srv-readmore">Read More →</a></div>
-                <div class="service-card"><div class="srv-icon-box">💪</div><h3>Loading and Unloading</h3><p>From beds to fragile stools, our expert movers systematically organize your items for efficient loading and unloading cycles.</p><a href="#contact" class="srv-readmore">Read More →</a></div>
-                
-                <div class="custom-plan-banner">
-                    <div>
-                        <h4>Need a custom moving plan?</h4>
-                        <p>Tell us your requirements and we'll put together a tailored quote — no obligations.</p>
+            <div class="services-horizontal-grid">
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=400" alt="Home Shifting in Vadodara">
+                    <div class="srv-text-container">
+                        <h3>Home Shifting Service</h3>
+                        <p>Whether moving locally in Vadodara or across India, our team ensures your belongings are packed and unpacked with complete care under supervision.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
-                    <a href="#contact" class="banner-cta-btn">View All Services →</a>
+                </div>
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=400" alt="Corporate Shifting">
+                    <div class="srv-text-container">
+                        <h3>Office Shifting Services</h3>
+                        <p>We provide highly efficient corporate relocation with minimized office operational downtime and professional handling of infrastructure assets.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=400" alt="Vehicle Carrier Services">
+                    <div class="srv-text-container">
+                        <h3>Vehicle Packers and Movers</h3>
+                        <p>Our professionals transport cars and bikes safely between cross-border checkpoints inside enclosed, dedicated heavy auto container carriers.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400" alt="Commercial Logistics">
+                    <div class="srv-text-container">
+                        <h3>Warehouse Goods Shifting</h3>
+                        <p>Our specialized cargo logistics networks ensure zero-delay industrial distribution and robust inventory transit between commercial hubs.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=400" alt="Premium Multi layer wrapping">
+                    <div class="srv-text-container">
+                        <h3>Packing and Unpacking</h3>
+                        <p>We take away the complete hassle of packing using robust heavy corrugated boxes, air bubble sheets, and high-tensile stretch film wraps.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=400" alt="Furniture Disassembling and Assembly">
+                    <div class="srv-text-container">
+                        <h3>Assembling & Disassembling</h3>
+                        <p>Our disassembling service is perfect for large modern furniture units like modular beds, dining sets, and oversized storage wardrobes.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1565793298595-6a8799944088?q=80&w=400" alt="Heavy Cargo Loading Operations">
+                    <div class="srv-text-container">
+                        <h3>Loading and Unloading</h3>
+                        <p>From complex household goods to fragile structural artifacts, our physically trained crews use safe lifting tools to avoid cargo scratches.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="service-card scroll-popup-node">
+                    <img class="srv-img-frame" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=400" alt="Pan India Network Logistics">
+                    <div class="srv-text-container">
+                        <h3>Pan-India Logistic Network</h3>
+                        <p>Gain access to rapid intercity delivery routes seamlessly operating across all major Indian states with full clearance compliance logs.</p>
+                        <a href="#about" class="srv-readmore">Enquire Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="why-choose-us" class="sec-padding">
+    <section id="process" class="sec-padding">
         <div class="container">
             <div class="center-heading">
-                <h2>Why Hiring <span>Professionals Helps</span></h2>
-                <p>From narrow lanes to monsoon weather, local expertise makes every move safer, faster, and stress-free.</p>
+                <span class="sub-tag">Four Simple Steps</span>
+                <h2>How Om Logistics <span>Eases Shifting for You</span></h2>
+                <p>Simple, reliable, and completely structured transit stages tailored perfectly around your schedule constraints.</p>
             </div>
 
-            <div class="prof-helps-layout">
-                <div class="helps-dark-panel">
-                    <div class="help-row-node">
-                        <div class="help-icon-badge">🌧️</div>
-                        <div class="help-text-node">
-                            <h4>Monsoon-Ready Packing</h4>
-                            <p>Monsoon seasons require proper waterproof multi-ply structural layer packing to shield heavy carton box units safely.</p>
-                        </div>
-                    </div>
-                    <div class="help-row-node">
-                        <div class="help-icon-badge">🛣️</div>
-                        <div class="help-text-node">
-                            <h4>Narrow Lane Navigation</h4>
-                            <p>Old residential zones have challenging narrow lanes, making relocation complex without our experienced, synchronized drivers.</p>
-                        </div>
-                    </div>
-                    <div class="help-row-node">
-                        <div class="help-icon-badge">⚡</div>
-                        <div class="help-text-node">
-                            <h4>Faster & Safer Moves</h4>
-                            <p>Customers looking for immediate house shifting choose us because structured handling loops accelerate completion speeds safely.</p>
-                        </div>
-                    </div>
+            <div class="how-works-horizontal-grid">
+                <div class="step-horizontal-card scroll-popup-node">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-file-signature"></i></div>
+                    <h4>Describe Your Needs</h4>
+                    <p>Submit our digital quote sheet to share your location coordinates. A dedicated relocation expert will connect promptly.</p>
                 </div>
-
-                <div class="pricing-white-panel">
-                    <div class="pricing-tag-row">
-                        <span class="p-badge-tag">No Hidden Fees</span>
-                        <div style="color:var(--orange-secondary); font-weight:700;">₹ Transparent Pricing</div>
-                    </div>
-                    <h3>Transparent Pricing That Customers Trust</h3>
-                    <p class="desc-p">Customers often worry about sudden hidden charges. Genuine pricing configurations help clients budget shifting smoothly without extra surprises.</p>
-                    
-                    <div class="pricing-factors-matrix">
-                        <div class="factor-box-card"><span>📦</span> Packing Volume</div>
-                        <div class="factor-box-card"><span>📍</span> Distance</div>
-                        <div class="factor-box-card"><span>💪</span> Labour Required</div>
-                        <div class="factor-box-card"><span>🚛</span> Vehicle Type</div>
-                    </div>
+                <div class="step-horizontal-card scroll-popup-node">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-calculator"></i></div>
+                    <h4>Get a Free Quote</h4>
+                    <p>Our honest assessment protocols ensure you only pay for your exact cargo volumes with absolutely zero hidden overhead metrics.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="areas" class="sec-alt">
-        <div class="container split-network-layout">
-            <div class="net-white-box">
-                <div class="net-header-block">
-                    <div class="net-icon-square">📍</div>
-                    <div class="net-header-txt">
-                        <span>Pan-India Network</span>
-                        <h3>Major Cities Covered Across India</h3>
-                    </div>
+                <div class="step-horizontal-card scroll-popup-node">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h4>Plan & Confirm</h4>
+                    <p>Finalize your preferred moving date. We book specialized transport vehicles and initiate real-time GPS tracking logs.</p>
                 </div>
-                <p class="net-desc-text">Customers using our premium shifting support systems benefit from continuous connectivity linking key metropolitan routes smoothly.</p>
-                
-                <div class="locations-flex-wrap">
-                    <div class="loc-pill-tag">Vadodara</div>
-                    <div class="loc-pill-tag">Ahmedabad</div>
-                    <div class="loc-pill-tag">Surat</div>
-                    <div class="loc-pill-tag">Rajkot</div>
-                    <div class="loc-pill-tag">Mumbai</div>
-                    <div class="loc-pill-tag">Delhi</div>
-                    <div class="loc-pill-tag">Bangalore</div>
-                    <div class="loc-pill-tag">Pune</div>
-                    <div class="loc-pill-tag">Hyderabad</div>
-                    <div class="loc-pill-tag">Chennai</div>
-                </div>
-            </div>
-
-            <div class="materials-dark-box">
-                <div class="net-header-block">
-                    <div class="net-icon-square" style="background:rgba(255,255,255,0.1);">🛡️</div>
-                    <div class="mat-header-txt">
-                        <span>Safe Packing</span>
-                        <h3>Materials Used for Safe Relocation</h3>
-                    </div>
-                </div>
-                
-                <div class="materials-list-vertical">
-                    <div class="mat-row-check-card"><span class="check-bullet">✓</span> <strong>Bubble Wrap</strong> <span class="lbl-muted">For fragile items protection</span></div>
-                    <div class="mat-row-check-card"><span class="check-bullet">✓</span> <strong>Strong Carton Boxes</strong> <span class="lbl-muted">For secure local structural movement</span></div>
-                    <div class="mat-row-check-card"><span class="check-bullet">✓</span> <strong>Waterproof Wrapping</strong> <span class="lbl-muted">For robust elements weather defense</span></div>
-                    <div class="mat-row-check-card"><span class="check-bullet">✓</span> <strong>Foam Sheets</strong> <span class="lbl-muted">For high-worth electronics safety</span></div>
-                    <div class="mat-row-check-card"><span class="check-bullet">✓</span> <strong>Stretch Film</strong> <span class="lbl-muted">For fine wooden furniture shields</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="sec-padding">
-        <div class="container due-diligence-layout">
-            <div class="due-dark-pane">
-                <span class="due-tag">Due Diligence</span>
-                <h3>Verify Credentials Before Handing Over Your Luggage</h3>
-                
-                <div class="due-list-item-card"><div class="d-seq-number">01</div><div class="d-core-text">Talk to them over a phone call to assess how they communicate.</div></div>
-                <div class="due-list-item-card"><div class="d-seq-number">02</div><div class="d-core-text">Check and verify the vehicles (trucks) they use before booking.</div></div>
-                <div class="due-list-item-card"><div class="d-seq-number">03</div><div class="d-core-text">Confirm that they are verified, licensed, and registered professionals.</div></div>
-                <div class="due-list-item-card"><div class="d-seq-number">04</div><div class="d-core-text">Don't trust words alone — ask them to show documents of authenticity.</div></div>
-                <div class="due-list-item-card"><div class="d-seq-number">05</div><div class="d-core-text">Check online reviews and ratings across all platforms for a clean record.</div></div>
-            </div>
-
-            <div class="how-works-white-pane">
-                <span class="p-badge-tag">How It Works</span>
-                <h3 style="font-size:22px; color:var(--navy-primary); font-weight:800; margin-top:5px;">How Om Logistics <span>Eases Shifting for You</span></h3>
-                
-                <div class="how-works-vertical-timeline">
-                    <div class="timeline-step-node">
-                        <div class="step-bubble-icon">1</div>
-                        <div class="step-info-block"><h4>Describe Your Needs</h4><p>Submit our digital intake quote sheet to state your target timeline coordinates. A logistics mapping specialist will reach out promptly.</p></div>
-                    </div>
-                    <div class="timeline-step-node">
-                        <div class="step-bubble-icon">2</div>
-                        <div class="step-info-block"><h4>Get a Free Customized Quote</h4><p>Our processing methodologies ensure you only pay for your precise cargo weight volume with no arbitrary overhead metrics added.</p></div>
-                    </div>
-                    <div class="timeline-step-node">
-                        <div class="step-bubble-icon">3</div>
-                        <div class="step-info-block"><h4>Plan Ahead and Confirm</h4><p>Finalize your preferred operational launch window. We set up transit tracking logs for active oversight.</p></div>
-                    </div>
-                    <div class="timeline-step-node">
-                        <div class="step-bubble-icon">4</div>
-                        <div class="step-info-block"><h4>We Transport You Without Stress</h4><p>Our expert packing crew arrives promptly to pack your inventory inside secure custom compartments while you sit back and rest easy.</p></div>
-                    </div>
+                <div class="step-horizontal-card scroll-popup-node">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <h4>Stress-Free Transit</h4>
+                    <p>Our expert crew arrives on schedule to pack and transfer your items securely while you rest easy and track progress.</p>
                 </div>
             </div>
         </div>
@@ -1384,30 +1141,31 @@
         <div class="container">
             <div class="center-heading">
                 <h2>What Our <span>Clients Say</span></h2>
-                <p>Read honest relocation summaries directly from our verified consumer platform.</p>
+                <p>Read honest, verified relocation summaries directly from our customer platform history logs.</p>
             </div>
-            <div class="reviews-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
-                <div class="review-card">
+
+            <div class="reviews-horizontal-grid">
+                <div class="review-card scroll-popup-node">
                     <p>"The entire crew arrived exactly as scheduled in Vadodara. My heavy modular wardrobes and double beds were carefully disassembled, beautifully wrapped, and rebuilt perfectly at my new flat."</p>
                     <div class="review-by">Amit Verma, Vadodara</div>
                 </div>
-                <div class="review-card">
+                <div class="review-card scroll-popup-node">
                     <p>"Extremely helpful vehicle carrier transport team. Shipped my new SUV from Vadodara to Delhi cleanly inside their closed container vehicle carrier. Not a single scratch or issue encountered."</p>
                     <div class="review-by">Priya Sharma, Delhi NCR</div>
                 </div>
-                <div class="review-card">
+                <div class="review-card scroll-popup-node">
                     <p>"Moving my entire office setup seemed like a massive headache, but these guys handled all the computers, desks, and sensitive files perfectly over the weekend. Zero downtime for our business!"</p>
                     <div class="review-by">Rajesh Mehta, Ahmedabad</div>
                 </div>
-                <div class="review-card">
+                <div class="review-card scroll-popup-node">
                     <p>"Most packers add unexpected charges at the end, but Om Logistics stuck perfectly to their original quote. The packing quality was outstanding, especially for our fragile kitchen items."</p>
                     <div class="review-by">Vikram Patel, Surat</div>
                 </div>
-                <div class="review-card">
+                <div class="review-card scroll-popup-node">
                     <p>"Very professional and well-mannered staff. They took care of everything from loading to unloading, and didn't rush through the process. Highly recommend their home shifting service!"</p>
                     <div class="review-by">Sneha Joshi, Pune</div>
                 </div>
-                <div class="review-card">
+                <div class="review-card scroll-popup-node">
                     <p>"I was worried about my bike relocation, but they packed it with multi-layer bubble wrap and delivered it to Bangalore ahead of schedule. Great communication throughout transit."</p>
                     <div class="review-by">Anand Rao, Bangalore</div>
                 </div>
@@ -1419,62 +1177,54 @@
         <div class="container">
             <div class="center-heading">
                 <h2>Frequently Asked <span>Questions</span></h2>
-                <p>Everything you need to know about our packing, moving, and relocation structures.</p>
+                <p>Quickly access clear, transparent answers regarding our packing standards and insurance options.</p>
             </div>
+
             <div class="faq-accordion">
                 <div class="accordion-item">
-                    <h4>What items are excluded by Om Logistics and Packers?</h4>
-                    <p>We help you move everything from 1 RK to 5 BHK and villas. However, we do not deliver items which are illegal, dangerous, flammable, hazardous, or prohibited by law (like gas cylinders or fuel fluids).</p>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>What items are excluded by Om Logistics and Packers?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We help you move everything from 1 RK to 5 BHK and villas. However, we do not deliver items which are illegal, dangerous, flammable, hazardous, or prohibited by law (like gas cylinders, explosive items, or liquid fuels).</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
-                    <h4>How safely do you pack goods?</h4>
-                    <p>Om Logistics utilizes a robust three-layer packing system. We ensure your items—including fragile glass and high-value electronics—are fully protected using premium bubble wraps, strong carton boxes, and stretch film.</p>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>How safely do you pack goods?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Om Logistics utilizes a robust three-layer packing system. We ensure your items—including fragile glassware and high-value home appliances—are protected using premium air-bubble sheets, sturdy corrugated cartons, and stretch film wraps.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
-                    <h4>How much do packers and movers charge?</h4>
-                    <p>Our pricing is completely transparent based on your specific packing volume, moving distance, vehicle type, and required labor force. There are no hidden fees, and you'll receive a clear breakdown upfront.</p>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>How much do packers and movers charge?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Our pricing model is completely transparent and computed upfront based on total packing volume, point-to-point distance, specific vehicle size required, and active labor headcount. There are zero hidden fees added on the delivery day.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
-                    <h4>Do you dismantle and assemble furniture?</h4>
-                    <p>Yes! Our professional moving crew handles the complete disassembling and reassembling of large furniture items like modular beds, dining tables, and wardrobes to ensure they are transported safely without damage.</p>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Do you dismantle and assemble furniture?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes! Our professional moving crew handles the complete disassembling and reassembling of large furniture setups like modular beds, dining tables, and large wardrobes to guarantee completely scuff-free transport.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
-                    <h4>Are there any additional or hidden charges?</h4>
-                    <p>The quote we provide after assessing your inventory list includes all operational costs. No extra charges will be added unless you make last-minute modifications to your destination or item list details.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="sec-alt">
-        <div class="container contact-grid">
-            <div class="office-details">
-                <h3>Contact Corporate Headquarters</h3>
-                <p>Reach out to our centralized administrative hubs anytime for direct quote resolution support or booking modifications.</p>
-                
-                <div class="branch-block">
-                    <h5>Main Head Office Hub (Vadodara)</h5>
-                    <p>B31, Om Logistics House, Opp. Vrundavan Township, Harni Road, Vadodara - 390006</p>
-                    <p>📞 Phone: +91 9898146966</p>
-                </div>
-                <div class="branch-block">
-                    <h5>North India Strategic Branch</h5>
-                    <p>Shop No. 2, Laxmi Bai Chowk, Near Balsamand, Hisar Road, Haryana - 125001</p>
-                </div>
-            </div>
-
-            <div class="office-details">
-                <h3>Corporate Service Matrix</h3>
-                <p>Our platforms are accessible daily to manage freight pipelines across target processing sectors without downtime.</p>
-                <div class="branch-block">
-                    <h5>Direct Email Channels</h5>
-                    <p>📩 info@omlogisticspackers.in</p>
-                    <p>📩 support@omlogisticspackers.in</p>
-                </div>
-                <div class="branch-block">
-                    <h5>Operation Hours</h5>
-                    <p>Monday – Saturday: 8:00 AM – 8:00 PM</p>
-                    <p>24/7 Phone Support Network Active</p>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Are there any additional or hidden charges?</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>The quote provided by our coordinator after inventory verification covers all toll taxes, service components, and operational loops. No extra charges are added unless you choose to add extra goods or change target locations last-minute.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1484,7 +1234,7 @@
         <div class="container corp-strip-flex">
             <div class="corp-left-tag">
                 <h4>Om Logistics and Packers</h4>
-                <p>🛡️ 24/7 Service Provider In India</p>
+                <p><i class="fa-solid fa-circle-check" style="color:var(--logo-orange);"></i> 24/7 Premium Relocation Network Across India</p>
             </div>
             <div class="corp-metrics-set">
                 <div class="corp-stat-node">
@@ -1492,7 +1242,7 @@
                     <div class="stat-label">Brand Offices</div>
                 </div>
                 <div class="corp-stat-node">
-                    <div class="stat-big-num" data-target="4203">0</div>
+                    <div class="stat-big-num" data-target="4990">0</div>
                     <div class="stat-label">Happy Clients</div>
                 </div>
                 <div class="corp-stat-node">
@@ -1506,48 +1256,57 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <h4 style="color:#fff;">OM LOGISTICS</h4>
-                <p>Trusted packers and movers across India. We handle your belongings with care, precision, and a promise of safe delivery — every single time.</p>
+                <h4 style="color:#fff;">OM LOGISTICS & PACKERS</h4>
+                <p style="margin-top: 10px;">Trusted packers and movers across India. We handle your belongings with care, precision, and an absolute guarantee of safe delivery — every single time.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Our Services</a></li>
-                    <li><a href="#why-choose-us">Why Us</a></li>
+                    <li><a href="#process">Shifting Process</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#faq">FAQ Overview</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Our Services</h4>
+                <h4>Moving Services</h4>
                 <ul>
                     <li><a href="#services">House Shifting</a></li>
-                    <li><a href="#services">Office Shifting</a></li>
-                    <li><a href="#services">Car Relocation</a></li>
+                    <li><a href="#services">Office Relocation</a></li>
+                    <li><a href="#services">Car Transportation</a></li>
                     <li><a href="#services">Packing & Unpacking</a></li>
-                    <li><a href="#services">Warehouse Service</a></li>
+                    <li><a href="#services">Warehouse Shifting</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Get In Touch</h4>
                 <div class="contact-vertical-list">
-                    <div class="contact-list-card"><span class="c-icon-square">📍</span><div>B31, Om Logistics House, Harni Road, Vadodara 390006</div></div>
-                    <div class="contact-list-card"><span class="c-icon-square">📞</span><div>+91 9898146966</div></div>
-                    <div class="contact-list-card"><span class="c-icon-square">✉️</span><div>info@omlogisticspackers.in</div></div>
+                    <div class="contact-list-card">
+                        <span class="c-icon-square"><i class="fa-solid fa-location-dot"></i></span>
+                        <div>B31, Om Logistics House, Opp. Vrundavan Township, Harni Road, Vadodara - 390006</div>
+                    </div>
+                    <div class="contact-list-card">
+                        <span class="c-icon-square"><i class="fa-solid fa-phone"></i></span>
+                        <div><a href="tel:+919898146966">+91 9898146966</a></div>
+                    </div>
+                    <div class="contact-list-card">
+                        <span class="c-icon-square"><i class="fa-solid fa-envelope"></i></span>
+                        <div><a href="mailto:info@omlogisticspackers.in">info@omlogisticspackers.in</a></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Om Logistics & Packers. All rights reserved. Premium Relocation Transit Network.</p>
+            <p>© 2026 Om Logistics & Packers. All rights reserved. Premium Relocation Transit Network Hub.</p>
         </div>
     </footer>
 
-    <a href="tel:+919898146966" class="call-btn-float">📞 Call Us</a>
-    <a href="https://wa.me/919898146966" target="_blank" class="whatsapp-btn-float">💬 WhatsApp</a>
+    <a href="tel:+919898146966" class="call-btn-float"><i class="fa-solid fa-phone"></i> Call Us</a>
+    <a href="https://wa.me/919898146966" target="_blank" class="whatsapp-btn-float"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
 
     <script>
-        // Tab Content Switcher Functionality (Screenshot 5)
+        // About Tab Swapper Control Module
         function switchAboutTab(event, tabId) {
             const tabs = document.getElementsByClassName('tab-content-pane');
             for (let i = 0; i < tabs.length; i++) {
@@ -1561,7 +1320,24 @@
             event.currentTarget.classList.add('active-tab-head');
         }
 
-        // Running Numbers Odometer Animation Controller Logic (Screenshot 5 & 7)
+        // Accordion Interactive Trigger Logic
+        function toggleAccordion(headerElement) {
+            const currentItem = headerElement.parentElement;
+            const contentPane = currentItem.querySelector('.accordion-content');
+            const isActive = currentItem.classList.contains('active-faq');
+            
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('active-faq');
+                item.querySelector('.accordion-content').style.maxHeight = null;
+            });
+
+            if (!isActive) {
+                currentItem.classList.add('active-faq');
+                contentPane.style.maxHeight = contentPane.scrollHeight + "px";
+            }
+        }
+
+        // Odometer Running Counters Engine Logic
         function initRunningCountersAnimation() {
             const counterElements = document.querySelectorAll('.num-core, .stat-big-num');
             
@@ -1569,17 +1345,22 @@
                 const targetValue = parseInt(counter.getAttribute('data-target'), 10);
                 let currentCount = 0;
                 
-                // Speed calculation variables based on size
                 const duration = 1500; 
                 const frameRate = 1000 / 60; 
                 const steps = duration / frameRate;
                 const incrementAmount = Math.ceil(targetValue / steps);
 
-                const countUpdateInterval = setInterval(() => {
+                const countInterval = setInterval(() => {
                     currentCount += incrementAmount;
                     if (currentCount >= targetValue) {
-                        counter.innerText = targetValue + (targetValue === 7 ? '+' : targetValue === 100 ? '%' : '+');
-                        clearInterval(countUpdateInterval);
+                        if (targetValue === 7 || targetValue === 15 || targetValue === 4990 || targetValue === 5000) {
+                            counter.innerText = targetValue + "+";
+                        } else if (targetValue === 100) {
+                            counter.innerText = targetValue + "%";
+                        } else {
+                            counter.innerText = targetValue;
+                        }
+                        clearInterval(countInterval);
                     } else {
                         counter.innerText = currentCount;
                     }
@@ -1587,9 +1368,41 @@
             });
         }
 
-        // Trigger runtime animations once layout is loaded completely
+        // Sequential Scroll-driven Cascading Pop Up Observation Engine
+        function initScrollPopupAnimations() {
+            const popupNodes = document.querySelectorAll('.scroll-popup-node');
+            
+            const options = {
+                root: null,
+                threshold: 0.05,
+                rootMargin: "0px 0px -30px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                let intersectingBatches = [];
+                
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        intersectingBatches.push(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+
+                // Apply staggered delay indexes to visible groups smoothly
+                intersectingBatches.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('popup-visible');
+                    }, index * 120); 
+                });
+            }, options);
+
+            popupNodes.forEach(node => observer.observe(node));
+        }
+
+        // Global Orchestration Initialization Call
         window.addEventListener('DOMContentLoaded', () => {
             initRunningCountersAnimation();
+            initScrollPopupAnimations();
         });
     </script>
 </body>
